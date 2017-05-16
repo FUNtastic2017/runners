@@ -1,223 +1,227 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="components/loader.js"></script>
-    <link rel="stylesheet" href="components/loader.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/chart.css">
-    <link rel="stylesheet" href="css/runking.css">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
-    <script type="text/javascript" src="js/to-server.js"></script>
-    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/load.js"></script>
-    <script type="text/javascript" src="js/position.js"></script>
-    <script type="text/javascript" src="js/ranking-to-server.js"></script>
-    <script type="text/javascript" src="js/map.js"></script>
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chart.css">
+  <link rel="stylesheet" href="css/runking.css">
+  <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+  <script type="text/javascript" src="js/to-server.js"></script>
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/load.js"></script>
+  <script type="text/javascript" src="js/position.js"></script>
+  <script type="text/javascript" src="js/ranking-to-server.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
+
 </head>
 <body>
 
-<!-- RUNERS LOGO SHOW -->
- <div id="loader"><img src="img/RunnersHome.jpg" width="100%" alt="HOME" /></div>
- <div id="fade"></div>
+  <!-- RUNERS LOGO SHOW -->
+  <div id="loader"><img src="img/RunnersHome.jpg" width="100%" alt="HOME" /></div>
+  <div id="fade"></div>
 
 
-<!-- AFTER RUNERS LOGO SHOW -->
-<div id="main-contents">
-	<nav class="nav-extended orange darken-3">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">RUNNERS</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
-    
-    
-    <div class="nav-content orange darken-3">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1">HOME</a></li>
-        <li class="tab"><a class="active" href="#test2" onclick="initMap();">RUNKING</a></li>
-        <li class="tab"><a href="#test3" onclick="initMap();">MAP</a></li>
-      </ul>
-    </div>
-  </nav>
-  
-  <div id="contents">
-  <!-- HOME -->
-  <div id="test1" class="col s12">
-    <div class="card-home">
-      <div class="card-header-home" style="background-image: url(img/nanaumi2.jpg)">
+  <!-- AFTER RUNERS LOGO SHOW -->
+  <div id="main-contents">
+    <nav class="nav-extended orange darken-3">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">RUNNERS</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+      </div>
+
+
+      <div class="nav-content orange darken-3">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a href="#test1">HOME</a></li>
+          <li class="tab"><a class="active" href="#test2" onclick="initMap();">RUNKING</a></li>
+          <li class="tab"><a href="#test3" onclick="initMap();">MAP</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+
+
+    <!--main contents -->
+
+    <div id="contents">
+      <!-- HOME -->
+      <div id="test1" class="col s12">
+        <div class="card-home">
+          <div class="card-header-home" style="background-image: url(img/nanaumi2.jpg)">
             <div class="card-header-slanted-edge-home">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 210"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
             </div>
+          </div>
+
+          <div class="card-body-home">
+            <h2 class="name">Ryuhe Nanaumi</h2>
+            <h4 class="job-title">Hakodate, Japan</h4>
+            <div class="bio"></div>
+            <div class="social-accounts">
+              <a href="#"><img src="http://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/dribbble.svg" alt=""><span class="sr-only">Dribbble</span></a>
+              <a href="#"><img src="http://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/twitter.svg" alt=""><span class="sr-only">Twitter</span></a>
+              <a href="#"><img src="http://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-      <div class="card-body-home">
-          <h2 class="name">Ryuhe Nanaumi</h2>
-          <h4 class="job-title">Hakodate, Japan</h4>
-          <div class="bio"></div>
-          <div class="social-accounts">
-            <a href="#"><img src="http://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/dribbble.svg" alt=""><span class="sr-only">Dribbble</span></a>
-            <a href="#"><img src="http://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/twitter.svg" alt=""><span class="sr-only">Twitter</span></a>
-            <a href="#"><img src="http://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
-          </div>
-          
-      </div>
-      
-      
 
-      
-  </div>
-  </div>
-  
-  
-  <!-- RUNKING -->
-  <div id="test2" class="col s12">
-    <ul class="collection"> 
-    
-    <li class="collection-item avatar">
-      <img src="img/watanabe.png" alt="" class="circle">
-      <span id="name0" class="title">KOKI WATANABE</span>
-      <p id="time0"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
-      <p id="dist0"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
-      <a href="#!" class="secondary-content"><span class="chip">1</span></a>
-      <a href="#!" class="secondary-content" style="left: 250px" onclick=alert("頑張れ！！");><i class="material-icons">thumb_up</i></a>
-    </li>
-    
-    
-    <li class="collection-item avatar">
-      <img src="img/takako.png" alt="" class="circle">
-      <span id="name1" class="title">KOTA TAKADA</span>
-      <p id="time1"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
-      <p id="dist1"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
-      <a href="#!" class="secondary-content"><span class="chip">2</span></a>
-      <a href="#!" class="secondary-content" style="left: 250px"><i class="material-icons">thumb_up</i></a>
-    </li>
-    
-    
-    <li class="collection-item avatar">
-      <img src="img/takagawa.png" alt="" class="circle">
-      <span id="name2" class="title">YUHE TAKAGAWA</span>
-      <p id="time2"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
-      <p id="dist2"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
-      <a href="#!" class="secondary-content"><span class="chip">3</span></a>
-      <a href="#!" class="secondary-content" style="left: 250px"><i class="material-icons">thumb_up</i></a>
-    </li>
-    
-    <li class="collection-item avatar">
-      <img src="img/nagai.png" alt="" class="circle">
-      <span id="name3" class="title">NAGAI YOTA</span>
-      <p id="time3"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
-      <p id="dist3"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
-      <a href="#!" class="secondary-content"><span class="badge">4</span></a>
-      <a href="#!" class="secondary-content" style="left: 250px"><i class="material-icons">thumb_up</i></a>
-    </li>
-    
-    <li class="collection-item avatar">
-      <img src="img/nanaumi.png" alt="" class="circle">
-      <span id="name4" class="title">RYUHE NANAUMI</span>
-      <p id="time4"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
-      <p id="dist4"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
-      <a href="#!" class="secondary-content"><span class="badge">5</span></a>
-      <a href="#!" class="secondary-content" style="left: 250px"><i class="material-icons">thumb_up</i></a>
-    </li>
-    
-    
-    
-  </ul>
-  
-  </div>
-  
-  <!-- MAP -->
-  <div id="test3" class="col s12">
-  
-    <div id="map" style="width:100%;"></div>
 
-  
-    <div class="row">
-      <div class="col s12 mt20" style="background-color: #eceff1; padding: 20px;">
-          <div class="chip"><img src="img/nanaumi.png">nanaumi</div>
-          <div class="chip"><img src="img/watanabe.png">watanabe</div>
-          <div class="chip"><img src="img/takako.png">takada</div>
-          <div class="chip"><img src="img/nagai.png">nagai</div>
-          <div class="chip"><img src="img/takagawa.png">takagawa</div>
+
+
+      <!-- RUNKING -->
+      <div id="test2" class="col s12">
+        <ul class="collection">
+
+          <li class="collection-item avatar">
+            <img src="img/watanabe.png" alt="" class="circle">
+            <span id="name0" class="title">KOKI WATANABE</span>
+            <p id="time0"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
+            <p id="dist0"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
+            <a href="#!" class="secondary-content"><span class="chip">1</span></a>
+            <a href="#!" class="secondary-content" style="left: 250px" onclick=alert("頑張れ！！");><i class="material-icons">thumb_up</i></a>
+          </li>
+
+
+          <li class="collection-item avatar">
+            <img src="img/takako.png" alt="" class="circle">
+            <span id="name1" class="title">KOTA TAKADA</span>
+            <p id="time1"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
+            <p id="dist1"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
+            <a href="#!" class="secondary-content"><span class="chip">2</span></a>
+            <a href="#!" class="secondary-content" style="left: 250px"><i class="material-icons">thumb_up</i></a>
+          </li>
+
+
+          <li class="collection-item avatar">
+            <img src="img/takagawa.png" alt="" class="circle">
+            <span id="name2" class="title">YUHE TAKAGAWA</span>
+            <p id="time2"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
+            <p id="dist2"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
+            <a href="#!" class="secondary-content"><span class="chip">3</span></a>
+            <a href="#!" class="secondary-content" style="left: 250px"><i class="material-icons">thumb_up</i></a>
+          </li>
+
+          <li class="collection-item avatar">
+            <img src="img/nagai.png" alt="" class="circle">
+            <span id="name3" class="title">NAGAI YOTA</span>
+            <p id="time3"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
+            <p id="dist3"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
+            <a href="#!" class="secondary-content"><span class="badge">4</span></a>
+            <a href="#!" class="secondary-content" style="left: 250px"><i class="material-icons">thumb_up</i></a>
+          </li>
+
+          <li class="collection-item avatar">
+            <img src="img/nanaumi.png" alt="" class="circle">
+            <span id="name4" class="title">RYUHE NANAUMI</span>
+            <p id="time4"><i class="tiny material-icons">schedule</i>13:00-24:00</p>
+            <p id="dist4"><i class="tiny material-icons">navigation</i>13:00-24:00</p>
+            <a href="#!" class="secondary-content"><span class="badge">5</span></a>
+            <a href="#!" class="secondary-content" style="left: 250px"><i class="material-icons">thumb_up</i></a>
+          </li>
+        </ul>
       </div>
-    </div><!--.row-->
-    
-    <div class="row mt20">
-      <div class="col s6 center">
-          <div class="wrapper">
-            <div class="pie start-0 end-25"></div>
-            <div class="pie big start-25 end-75"></div>
-            <div class="pie over"><span>25%</span></div>
+
+
+
+
+      <!-- MAP -->
+      <div id="test3" class="col s12">
+
+        <div id="map" style="width:100%;"></div>
+
+
+        <div class="row">
+          <div class="col s12 mt20" style="background-color: #eceff1; padding: 20px;">
+            <div class="chip"><img src="img/nanaumi.png">nanaumi</div>
+            <div class="chip"><img src="img/watanabe.png">watanabe</div>
+            <div class="chip"><img src="img/takako.png">takada</div>
+            <div class="chip"><img src="img/nagai.png">nagai</div>
+            <div class="chip"><img src="img/takagawa.png">takagawa</div>
           </div>
-         <h6>前日距離達成まで</h6>
-      </div>
-      <div class="col s6 center">
-          <div class="wrapper">
-            <div class="pie start-0 end-25"></div>
-            <div class="pie big start-25 end-75"></div>
-            <div class="pie over"><span>25%</span></div>
+        </div><!--.row-->
+
+        <div class="row mt20">
+          <div class="col s6 center">
+            <div class="wrapper">
+              <div class="pie start-0 end-25"></div>
+              <div class="pie big start-25 end-75"></div>
+              <div class="pie over"><span>25%</span></div>
+            </div>
+            <h6>前日距離達成まで</h6>
           </div>
-         <h6>設定時間まで</h6>
-      </div>
-    </div><!--.row-->
-    
-    <div class="row mt20">
-      <div class="col s6 center">
-          <div class="wrapper">
-            <div class="pie start-0 end-25"></div>
-            <div class="pie big start-25 end-75"></div>
-            <div class="pie over"><span>25%</span></div>
+          <div class="col s6 center">
+            <div class="wrapper">
+              <div class="pie start-0 end-25"></div>
+              <div class="pie big start-25 end-75"></div>
+              <div class="pie over"><span>25%</span></div>
+            </div>
+            <h6>設定時間まで</h6>
           </div>
-         <h6>トップランカーになるまで達成率</h6>
-      </div>
-      <div class="col s6 center">
-          <div class="wrapper">
-            <div class="pie start-0 end-25"></div>
-            <div class="pie big start-25 end-75"></div>
-            <div class="pie over"><span>25%</span></div>
+        </div><!--.row-->
+
+        <div class="row mt20">
+          <div class="col s6 center">
+            <div class="wrapper">
+              <div class="pie start-0 end-25"></div>
+              <div class="pie big start-25 end-75"></div>
+              <div class="pie over"><span>25%</span></div>
+            </div>
+            <h6>トップランカーになるまで達成率</h6>
           </div>
-         <h6>ランクアップまでの達成率</h6>
-      </div>
-    </div><!--.row-->
-    
-    <footer class="page-footer orange darken-3" style="margin-left: -10px; margin-right: -10px;">
-    <div class="footer-copyright">
+          <div class="col s6 center">
+            <div class="wrapper">
+              <div class="pie start-0 end-25"></div>
+              <div class="pie big start-25 end-75"></div>
+              <div class="pie over"><span>25%</span></div>
+            </div>
+            <h6>ランクアップまでの達成率</h6>
+          </div>
+        </div><!--.row-->
+
+        <footer class="page-footer orange darken-3" style="margin-left: -10px; margin-right: -10px;">
+          <div class="footer-copyright">
             <div class="container">
-                
-                <div class="row">
-                    <div class="col s6"><a class="waves-effect waves-light btn" onClick=start()>start</a></div>
-                    <div class="col s6"><a class="waves-effect waves-light btn" onClick=stop()>stop</a></div>
-                </div>
+
+              <div class="row">
+                <div class="col s6"><a class="waves-effect waves-light btn" onClick=start()>start</a></div>
+                <div class="col s6"><a class="waves-effect waves-light btn" onClick=stop()>stop</a></div>
+              </div>
             </div>
           </div>
-          </footer>
-    
-    
-  </div>
-  
-  
-  </div>
-  </div><!--#main-contents--> 
-  
-  
-       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADHsaljzZUQc5s8B8ZleIaxDWtSBXkJ-A"></script>
+        </footer>
+
+
+      </div>
+
+
+    </div>
+  </div><!--#main-contents-->
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADHsaljzZUQc5s8B8ZleIaxDWtSBXkJ-A"></script>
 </body>
 </html>
