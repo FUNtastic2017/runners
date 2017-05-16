@@ -1,0 +1,29 @@
+{
+    "plugins": [
+        "mobi.monaca.plugins.Monaca"
+    ],
+    "framework_version": "3.5",
+    "xcode_version": "7",
+    "cordova_version": "6.2",
+    "plugin_settings": {
+        "cordova-plugin-geolocation": {
+            "variables": []
+        },
+        "cordova-plugin-whitelist": {
+            "variables": []
+        }
+    },
+    "external_plugins": [
+        "cordova-plugin-whitelist@1.2.2",
+        "cordova-custom-config@2.0.3",
+        "cordova-plugin-geolocation@2.2.0",
+        "cordova-plugin-globalization@1.0.3"
+    ],
+    "title-ja": "",
+    "title-en": "",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [],
+    "name": "generated-1494893032-5916c01cff2af28156872e6a"
+}
